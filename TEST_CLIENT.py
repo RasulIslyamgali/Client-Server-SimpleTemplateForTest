@@ -67,7 +67,7 @@ def send_report_to_website(host: str, port: int, emp_id: int) -> (bool, str):
 if __name__ == "__main__":
     while True:
         status, response = send_report_to_website(host=host, port=port, emp_id=id_)
-        if status and "successful" in response:
+        if status and "successful" in response and id_ in response:
             print(f"Report about employee with id: {id_} is successful sended to {host}:{port}\r\n\r\n")
             break
         else:
